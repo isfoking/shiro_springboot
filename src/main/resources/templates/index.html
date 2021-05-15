@@ -1,0 +1,17 @@
+<html lang="zh_CN" xmlns:th="http://www.thymeleaf.org"
+      xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+</head>
+<body>
+这是首页 ... <br>
+输出认证通过的用户信息：：
+<shiro:principal/><!--输出认证信息-->
+<br>
+<span shiro:hasRole="role1">认证过的用户有role1角色</span><br>
+<span shiro:hasPermission="user:add">是否有无add权限</span><br>
+<a href="/isPermission">是否有权限</a>
+<a href="/logout">退出</a>
+</body>
+</html>
